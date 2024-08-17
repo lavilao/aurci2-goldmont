@@ -19,7 +19,7 @@ jobs:
     - name: Build Packages
       uses: kopp/build-aur-packages@v1
       env:
-        CFLAGS+= -march=goldmont-plus
+        CFLAGS: -march=goldmont-plus
       with:
         packages: >
           lsp-ai
