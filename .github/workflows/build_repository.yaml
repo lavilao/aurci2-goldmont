@@ -23,7 +23,6 @@ jobs:
       with:
         packages: >
           lsp-ai
-          emacs-ng
 
     - name: List generated Files
       run: ls -1 > ${{ github.workspace }}/files.txt
