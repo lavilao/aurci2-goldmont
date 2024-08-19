@@ -22,7 +22,6 @@ jobs:
         CFLAGS: -march=goldmont-plus
       with:
         packages: >
-          lsp-ai
           mwoffliner
 
     - name: List generated Files
