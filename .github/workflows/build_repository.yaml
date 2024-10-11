@@ -22,7 +22,7 @@ jobs:
         CFLAGS: -march=goldmont-plus
       with:
         packages: >
-          spacedrive-git
+          calibre-git
 
     - name: List generated Files
       run: ls -1 > ${{ github.workspace }}/files.txt
