@@ -22,7 +22,7 @@ jobs:
         CFLAGS: -march=goldmont-plus
       with:
         packages: >
-          calibre-git
+          reor-bin
 
     - name: List generated Files
       run: ls -1 > ${{ github.workspace }}/files.txt
