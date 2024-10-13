@@ -23,6 +23,7 @@ jobs:
       with:
         packages: >
           reor-bin
+          lsp-ai
 
     - name: List generated Files
       run: ls -1 > ${{ github.workspace }}/files.txt
