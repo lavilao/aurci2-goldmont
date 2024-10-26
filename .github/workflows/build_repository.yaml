@@ -22,7 +22,7 @@ jobs:
         CFLAGS: -march=goldmont-plus
       with:
         packages: >
-          reor-bin
+          miru-app-git
           lsp-ai
 
     - name: List generated Files
