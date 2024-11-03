@@ -22,7 +22,7 @@ jobs:
         CFLAGS: -march=goldmont-plus
       with:
         packages: >
-          miru-app-git
+          mindforger
           lsp-ai
 
     - name: List generated Files
