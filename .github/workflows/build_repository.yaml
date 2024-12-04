@@ -24,6 +24,7 @@ jobs:
         packages: >
           mindforger
           lsp-ai
+          basedpyright
 
     - name: List generated Files
       run: ls -1 > ${{ github.workspace }}/files.txt
