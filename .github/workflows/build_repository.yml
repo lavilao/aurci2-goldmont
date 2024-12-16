@@ -12,6 +12,9 @@ jobs:
   build_repository:
     runs-on: ubuntu-latest
     steps:
+    - name: Checkout Repository
+      uses: actions/checkout@v3
+
     - name: Get current time and date
       id: date
       run: echo "::set-output name=date::$(date +'%Y-%m-%d %H:%M')"
@@ -20,9 +23,14 @@ jobs:
       run: |
         echo "Current user: $(whoami)"
         echo "Current directory: $(pwd)"
-        ls -la /home/builder/workspace/
+        ls -la
         echo "Environment variables:"
         env
+
+    - name: Create Workspace Directory
+      run: |
+        mkdir -p /home/runner/workspace
+        echo "Workspace directory created: /home/runner/workspace"
 
     - name: Build Packages
       uses: kopp/build-aur-packages@v1
@@ -38,12 +46,14 @@ jobs:
 
     - name: List generated Files
       run: ls -1 > ${{ github.workspace }}/files.txt
+
     - name: Remove the current data from the release
       uses: kopp/action-delete-release@v1
       env:
         GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
       with:
         tag_name: aurci2
+
     - name: Upload Files to Release
       uses: softprops/action-gh-release@v1
       env:
