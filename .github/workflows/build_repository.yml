@@ -43,6 +43,8 @@ jobs:
       env:
         CFLAGS: -march=goldmont-plus
         HOME: /home/runner
+        PACMAN_CACHE: /home/runner/.cache/pacman/pkg
+        PACMAN_CONFIG: /home/runner/.config/pacman
       with:
         packages: >
           mindforger
