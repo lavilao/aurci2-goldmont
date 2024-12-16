@@ -32,10 +32,17 @@ jobs:
         mkdir -p /home/runner/workspace
         echo "Workspace directory created: /home/runner/workspace"
 
+    - name: Set up AUR environment
+      run: |
+        mkdir -p /home/runner/.cache/pacman/pkg
+        mkdir -p /home/runner/.config/pacman
+        echo "AUR environment set up"
+
     - name: Build Packages
       uses: kopp/build-aur-packages@v1
       env:
         CFLAGS: -march=goldmont-plus
+        HOME: /home/runner
       with:
         packages: >
           mindforger
