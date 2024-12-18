@@ -22,9 +22,6 @@ jobs:
         CFLAGS: -march=goldmont-plus
       with:
         packages: >
-          mindforger
-          lsp-ai
-          basedpyright
           helix-git
           mission-center
     - name: List generated Files
