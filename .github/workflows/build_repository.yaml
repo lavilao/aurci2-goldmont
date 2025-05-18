@@ -23,7 +23,8 @@ jobs:
       with:
         packages: >
           simulationcraft-git
-          librum
+          qt5-webkit
+          mindforger
     - name: List generated Files
       run: ls -1 > ${{ github.workspace }}/files.txt
     - name: Remove the current data from the release
