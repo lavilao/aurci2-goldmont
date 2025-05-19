@@ -22,7 +22,6 @@ jobs:
         CFLAGS: -march=goldmont-plus
       with:
         packages: >
-          simulationcraft-git
           qt5-webkit
           mindforger
     - name: List generated Files
