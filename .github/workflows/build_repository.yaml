@@ -22,8 +22,7 @@ jobs:
         CFLAGS: -march=goldmont-plus
       with:
         packages: >
-          qt5-webkit
-          mindforger
+          aider-chat
     - name: List generated Files
       run: ls -1 > ${{ github.workspace }}/files.txt
     - name: Remove the current data from the release
