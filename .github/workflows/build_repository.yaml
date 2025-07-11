@@ -24,6 +24,7 @@ jobs:
         packages: >
           scls
           aider-chat
+          pipeline-gtk
     - name: List generated Files
       run: ls -1 > ${{ github.workspace }}/files.txt
     - name: Remove the current data from the release
