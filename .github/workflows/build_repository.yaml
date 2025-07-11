@@ -23,6 +23,7 @@ jobs:
       with:
         packages: >
           scls
+          aider-chat
     - name: List generated Files
       run: ls -1 > ${{ github.workspace }}/files.txt
     - name: Remove the current data from the release
